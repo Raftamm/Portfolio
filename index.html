@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaffTamms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset some basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000000; /* Background nero */
+      color: #fff; /* Testo bianco */
+      line-height: 1.6;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #000000, #333333); /* Sfondo nero gradiente */
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .headline {
+      font-size: 3rem;
+      font-weight: 600;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+
+    .cta-button {
+      padding: 12px 20px;
+      background-color: #fff;
+      color: #000000;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ff6b6b;
+      color: white;
+    }
+
+    /* About Section */
+    #about {
+      background-color: #111; /* Background scuro */
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 20px;
+      animation: scaleUp 1s ease-out forwards;
+    }
+
+    /* Projects Section */
+    #projects {
+      padding: 60px 0;
+      background-color: #222; /* Background scuro */
+      text-align: center;
+    }
+
+    .projects-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      color: #333;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .project-card p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 60px 0;
+      background-color: #111; /* Background scuro */
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form label {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 12px 20px;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #ff4c4c;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /* Scroll Animation */
+    .scroll-animation {
+      animation: scrollDown 1s ease-out forwards;
+    }
+
+    @keyframes scrollDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Home Section -->
+  <header id="home">
+    <div class="container">
+      <h1 class="headline">Ciao, sono RaffTamms.</h1>
+      <p class="subtitle">Esplora il mio mondo digitale</p>
+      <button class="cta-button" onclick="scrollToAbout()">Scopri di più</button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>Hacker di professione, programmer e coder</h2> <!-- Modificato il testo -->
+      <p class="about-text">Sono un hacker e sviluppatore con passione per la tecnologia e l'arte digitale. Creo e ricostuisco siti web a pagamento.</p>
+      <img src="https://www.labparlamento.it/wp-content/uploads/2023/06/hacker.jpg" alt="Profile Picture" class="profile-img">
+    </div>
+  </section>
+
+  <!-- Progetti Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>I miei progetti</h2>
+      <div class="projects-gallery">
+        <div class="project-card scroll-animation">
+          <h3>Creazione sito web personale</h3>
+          <p>Tariffa: 10 euro</p>
+        </div>
+        <div class="project-card scroll-animation">
+          <h3>Creazione sito web aziendale</h3>
+          <p>Tariffa: 15 euro</p>
+        </div>
+        <div class="project-card scroll-animation">
+          <h3>Manutenzione di un sito web</h3>
+          <p>Tariffa: 50 euro</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contattami</h2>
+      <form action="https://formspree.io/f/xpwzvkgr" method="POST">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="cta-button">Invia</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Funzione per scrollare verso la sezione "about"
+    function scrollToAbout() {
+      document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Animazione scroll per le sezioni
+    const projectCards = document.querySelectorAll('.scroll-animation');
+    projectCards.forEach(card => {
+      card.addEventListener('mouseover', () => {
+        card.classList.add('scroll-animation');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      projectCards.forEach(card => {
+        if (scrollPosition > card.offsetTop - window.innerHeight) {
+          card.classList.add('scroll-animation');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
